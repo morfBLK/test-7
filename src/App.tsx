@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {MenuData} from "./types";
+import Menu from "./Menu/Menu"
+
+
+const menuContain:MenuData[] = [
+  {name:'Сливочный Лагман', price: 265, mount: 0},
+  {name:'Гуйру Лагман', price: 245, mount: 0},
+  {name:'Босо Лагман', price: 220, mount: 0},
+  {name:'Лагман Vegan', price: 260, mount: 0},
+  {name:'Суйру Лагман', price: 200, mount: 0},
+  {name:'Могуру Лагман', price: 210, mount: 0}
+];
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+    <div className="App">
+
+      <div className="menu-order"></div>
+
+      <div className="menu-items">
+        <Menu menuContain={menuContain}/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+    </div>
+
+  );
 }
 
 export default App

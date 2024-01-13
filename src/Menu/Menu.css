@@ -1,0 +1,11 @@
+.dish-box {
+    width: 20%;
+    border: 3px solid black;
+    margin: 20px;
+    background: #d79ca7;
+}
+
+.menu-box {
+    display: flex;
+    background: #9ede9e;
+}

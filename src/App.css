@@ -1,16 +1,9 @@
+body {
+    background: url("https://imageproxy.wolt.com/venue/5de73670617ca01e70b732f8/435cc0a4-16d5-11ea-adcc-0a586465c85b_7M3A2608.jpg") no-repeat;
+    background-size: cover;
+}
+
 .App {
-  display: flex;
-  height: 100%;
-}
-
-.menu-order {
-  background: #747bff;
-  width: 30%;
-  height: 400px;
-}
-
-menu-items {
-  background: aqua;
-  width: 70%;
-  height: 400px;
+    display: flex;
+    height: 100%;
 }

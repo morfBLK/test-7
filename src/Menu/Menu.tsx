@@ -1,27 +1,24 @@
 import React from "react";
 import {MenuData} from "../types";
 import './Menu.css';
+import '../Card/Card'
+import Card from "../Card/Card";
 
 interface Props {
   menuContain: MenuData[]
-  deleteBtn: (name:string) => void;
+  deleteBtn: (name: string) => void;
 }
 
 const Menu: React.FC<Props> = (props) => {
-  const Print = () => {
-    return props.menuContain.map((dish) => {
-      return (
-        <div className='dish-box' key={dish.name + 1} onClick={() => props.deleteBtn(dish.name)}>
-          <p>{dish.name}</p>
-          <p>{dish.price}</p>
-        </div>
-      )})
-  }
+
   return (
-    <div>
-      <div className='menu-box'> {Print()}
+
+    <div className='add-items'>
+      <div>
+        <Card menuContain={props.menuContain} deleteBtn={props.deleteBtn}/>
       </div>
     </div>
+
   );
 };
 export default Menu;
